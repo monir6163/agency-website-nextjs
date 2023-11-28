@@ -1,9 +1,14 @@
+import AppFooter from "@/components/shared/AppFooter";
+import AppNavBar from "@/components/shared/AppNavBar";
 import AppProgressBar from "@/utility/AppProgressBar";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin-ext"],
+});
 
 export const metadata: Metadata = {
   title: "Agency Website Template - Next.js",
@@ -17,8 +22,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={poppins.className}>
+        <AppNavBar />
         {children}
+        <AppFooter />
         <AppProgressBar />
       </body>
     </html>

@@ -1,5 +1,7 @@
+import TestimonialsList from "@/components/Testimonials/TestimonialsList";
+
 const page = () => {
-  return <div>this is testitmonials page</div>;
+  return <TestimonialsList />;
 };
 
 export default page;

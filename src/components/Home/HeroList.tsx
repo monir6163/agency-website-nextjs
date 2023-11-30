@@ -1,17 +1,24 @@
 async function getHeroData() {
-  const res = await fetch("https://agency.teamrabbil.com/api/HeroList");
+  const res = await fetch(`${process.env.BASE_URL}/HeroList`);
   const data = await res.json();
   return data;
 }
 
+import AosConfig from "@/utility/AosConfig";
 import Image from "next/image";
 import Partner from "./Partner";
+AosConfig;
 
 const HeroList = async () => {
   let heroData = await getHeroData();
   return (
     <div className="relative h-auto ">
-      <div className=" max-w-screen-xl mx-auto px-4 pt-28 grid grid-cols-1 justify-items-center gap-5 lg:grid-cols-2">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        className=" max-w-screen-xl mx-auto px-4 pt-28 grid grid-cols-1 justify-items-center gap-5 lg:grid-cols-2"
+      >
         <div className="flex items-center">
           <div>
             <h1 className="text-2xl lg:text-5xl font-bold lg:leading-[65px] mb-4 capitalize">

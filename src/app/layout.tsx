@@ -3,6 +3,7 @@ import AppNavBar from "@/components/shared/AppNavBar";
 import AppProgressBar from "@/utility/AppProgressBar";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
@@ -14,7 +15,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Agency Website Template - Next.js",
+  title: "Home - Agency Website Template - Next.js",
   description: "Agency Website Template. Built with Next.js.",
 };
 

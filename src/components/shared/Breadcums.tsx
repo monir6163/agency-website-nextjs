@@ -1,7 +1,9 @@
+import AosConfig from "@/utility/AosConfig";
 import PageTitle from "@/utility/PageTitle";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+AosConfig;
 
 const Breadcums = ({ pageName }: any) => {
   return (
@@ -9,7 +11,12 @@ const Breadcums = ({ pageName }: any) => {
       <div className="w-full h-96 bg-slate-50 relative">
         <div className="max-w-screen-xl mx-auto px-4 py-8">
           <div className="flex items-center justify-between">
-            <div className="py-40">
+            <div
+              className="py-40"
+              data-aos="fade-down"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+            >
               <h1 className="text-3xl font-bold text-gray-900">
                 <PageTitle pagetitle={pageName} />
               </h1>

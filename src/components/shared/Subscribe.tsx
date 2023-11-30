@@ -1,6 +1,13 @@
+import AosConfig from "@/utility/AosConfig";
+AosConfig;
 const Subscribe = () => {
   return (
-    <div className="flex flex-col lg:flex-row justify-center items-center max-w-screen-xl mx-auto px-4 py-20">
+    <div
+      className="flex flex-col lg:flex-row justify-center items-center max-w-screen-xl mx-auto px-4 py-20"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+    >
       <div className=" shadow-lg rounded px-2 lg:w-2/4 flex flex-col justify-center items-center py-10 lg:py-20">
         <div className="text-green-500 text-xl mb-5 font-medium uppercase">
           SUBSCRIBE

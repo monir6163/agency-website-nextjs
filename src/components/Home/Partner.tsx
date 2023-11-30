@@ -1,5 +1,5 @@
 async function getBrandList() {
-  const res = await fetch("https://agency.teamrabbil.com/api/BrandList");
+  const res = await fetch(`${process.env.BASE_URL}/BrandList`);
   const data = await res.json();
   return data;
 }

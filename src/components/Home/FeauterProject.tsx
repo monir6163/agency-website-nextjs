@@ -1,16 +1,23 @@
 async function getFeauterProjectData() {
-  const res = await fetch("https://agency.teamrabbil.com/api/FeaturedProject");
+  const res = await fetch(`${process.env.BASE_URL}/FeaturedProject`);
   const feauterProjectData = await res.json();
   return feauterProjectData;
 }
+import AosConfig from "@/utility/AosConfig";
 import Image from "next/image";
 import Link from "next/link";
+AosConfig;
 
 const FeauterProject = async () => {
   const feauterProject = await getFeauterProjectData();
   return (
     <div className="bg-green-50">
-      <div className="max-w-screen-xl mx-auto px-4">
+      <div
+        className="max-w-screen-xl mx-auto px-4"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      >
         <div className="py-16">
           <div>
             <h4 className="font-medium text-lg text-green-600 uppercase mb-4">

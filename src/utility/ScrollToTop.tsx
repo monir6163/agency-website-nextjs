@@ -28,7 +28,7 @@ const ScrollToTop = () => {
       }}
       className={`${
         isVisible ? "block" : "hidden"
-      }   animate-bounce  w-10 h-10 bg-green-500 rounded-full flex items-center justify-center hover:bg-teal-600 transition-all ease-in duration-500`}
+      } animate-bounce w-10 h-10 bg-green-500 p-2 rounded-full flex items-center justify-center hover:bg-teal-600 transition-all ease-in duration-500`}
     >
       <div className="flex justify-center items-center">
         <FontAwesomeIcon icon={faArrowUp} className="text-xl text-white" />

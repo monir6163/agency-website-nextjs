@@ -1,10 +1,11 @@
 async function getWorkListData() {
-  const res = await fetch("https://agency.teamrabbil.com/api/WorkList");
-  const res2 = await fetch("https://agency.teamrabbil.com/api/StatList");
+  const res = await fetch(`${process.env.BASE_URL}/WorkList`);
+  const res2 = await fetch(`${process.env.BASE_URL}/StatList`);
   const data = await res.json();
   const data2 = await res2.json();
   return { data, data2 };
 }
+import AosConfig from "@/utility/AosConfig";
 import {
   faBook,
   faSmile,
@@ -14,13 +15,19 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import Counter from "./Counter";
+AosConfig;
 
 const WorkList = async () => {
   const workList = await getWorkListData();
   // console.log(parseFloat(workList.data2.followers.replace(/,/g, "")));
 
   return (
-    <div className="bg-white">
+    <div
+      className="bg-white"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+    >
       <div className="max-w-screen-xl mx-auto px-4">
         <div className="py-16">
           <div>

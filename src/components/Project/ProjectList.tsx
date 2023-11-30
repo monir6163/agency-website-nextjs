@@ -1,15 +1,22 @@
 async function getProjectList() {
-  const response = await fetch("https://agency.teamrabbil.com/api/AllProject");
+  const response = await fetch(`${process.env.BASE_URL}/AllProject`);
   const data = await response.json();
   return data;
 }
+import AosConfig from "@/utility/AosConfig";
 import Image from "next/image";
+AosConfig;
 
 const ProjectList = async () => {
   const projectList = await getProjectList();
   return (
     <div className="bg-white">
-      <div className="max-w-screen-xl mx-auto px-4">
+      <div
+        className="max-w-screen-xl mx-auto px-4"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      >
         <div className="pt-16">
           <div>
             <h4 className="font-medium text-lg text-green-600 uppercase mb-4">

@@ -1,3 +1,9 @@
+async function getTeamList() {
+  const response = await fetch(`${process.env.BASE_URL}/TeamList`);
+  const data = await response.json();
+  return data;
+}
+import AosConfig from "@/utility/AosConfig";
 import {
   faFacebook,
   faInstagram,
@@ -6,18 +12,18 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
-
-async function getTeamList() {
-  const response = await fetch("https://agency.teamrabbil.com/api/TeamList");
-  const data = await response.json();
-  return data;
-}
+AosConfig;
 
 const TeamList = async () => {
   const data = await getTeamList();
   return (
     <div className="bg-white">
-      <div className="max-w-screen-xl mx-auto px-4">
+      <div
+        className="max-w-screen-xl mx-auto px-4"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      >
         <div className="pt-16">
           <div>
             <h4 className="font-medium text-lg text-green-600 uppercase mb-4">

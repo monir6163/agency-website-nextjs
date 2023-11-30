@@ -15,8 +15,27 @@ const AppNavBar = () => {
     setMobileMenuOpen(false);
   }, [pathName]);
 
+  // navbar sticky on scroll down and remove sticky on scroll up effect start here
+  const [scrollPosition, setSrollPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setSrollPosition(position);
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="fixed w-full h-16 z-50">
+    <nav
+      className={` w-full h-16 z-50 ${
+        scrollPosition > 0
+          ? "shadow-md bg-slate-50 fixed transition-all ease-in duration-500"
+          : "absolute"
+      }`}
+    >
       <div className="max-w-screen-xl h-full mx-auto px-4">
         <div className="flex items-center justify-between h-full">
           <Link href={"/"}>
@@ -82,7 +101,9 @@ const AppNavBar = () => {
             <li className="mx-4">
               <Link
                 href={"/team"}
-                className="text-gray-900 hover:text-teal-600 font-medium text-base"
+                className={`text-gray-900 hover:text-teal-600 font-medium text-base ${
+                  pathName === "/team" ? "text-teal-600" : ""
+                }`}
               >
                 Team
               </Link>
@@ -90,7 +111,9 @@ const AppNavBar = () => {
             <li className="mx-4">
               <Link
                 href={"/service"}
-                className="text-gray-900 hover:text-teal-600 font-medium text-base"
+                className={`text-gray-900 hover:text-teal-600 font-medium text-base ${
+                  pathName === "/service" ? "text-teal-600" : ""
+                }`}
               >
                 Service
               </Link>
@@ -99,7 +122,9 @@ const AppNavBar = () => {
             <li className="mx-4">
               <Link
                 href={"/project"}
-                className="text-gray-900 hover:text-teal-600 font-medium text-base"
+                className={`text-gray-900 hover:text-teal-600 font-medium text-base ${
+                  pathName === "/project" ? "text-teal-600" : ""
+                }`}
               >
                 Projects
               </Link>
@@ -107,7 +132,9 @@ const AppNavBar = () => {
             <li className="mx-4">
               <Link
                 href={"/testimonials"}
-                className="text-gray-900 hover:text-teal-600 font-medium text-base"
+                className={`text-gray-900 hover:text-teal-600 font-medium text-base ${
+                  pathName === "/testimonials" ? "text-teal-600" : ""
+                }`}
               >
                 Testimonial
               </Link>
@@ -115,7 +142,7 @@ const AppNavBar = () => {
             <li className="mx-4">
               <Link
                 href={"#"}
-                className="text-gray-900 hover:text-teal-600 font-medium text-base px-8 p-3 rounded-lg border-[1px] border-[#20B15A]"
+                className="text-gray-900 hover:text-teal-600 font-medium text-base px-8 p-3 rounded-lg border-[1px] border-[#20B15A] hover:border-green-600 transition-all ease-in"
               >
                 Login
               </Link>
@@ -123,7 +150,7 @@ const AppNavBar = () => {
             <li className="mx-4">
               <Link
                 href={"#"}
-                className="text-white font-medium text-base px-8 p-[14.2px] rounded-lg bg-[#20B15A]"
+                className="text-white font-medium text-base px-8 p-[14.2px] rounded-lg hover:bg-green-600 transition-all ease-in bg-[#20B15A]"
               >
                 Register
               </Link>
@@ -149,7 +176,9 @@ const AppNavBar = () => {
           <li className="mx-4">
             <Link
               href={"/team"}
-              className="text-gray-900 hover:text-teal-600 font-medium text-base"
+              className={`text-gray-900 hover:text-teal-600 font-medium text-base ${
+                pathName === "/team" ? "text-teal-600" : ""
+              }`}
             >
               Team
             </Link>
@@ -157,7 +186,9 @@ const AppNavBar = () => {
           <li className="mx-4">
             <Link
               href={"/service"}
-              className="text-gray-900 hover:text-teal-600 font-medium text-base"
+              className={`text-gray-900 hover:text-teal-600 font-medium text-base ${
+                pathName === "/service" ? "text-teal-600" : ""
+              }`}
             >
               Service
             </Link>
@@ -166,7 +197,9 @@ const AppNavBar = () => {
           <li className="mx-4">
             <Link
               href={"/project"}
-              className="text-gray-900 hover:text-teal-600 font-medium text-base"
+              className={`text-gray-900 hover:text-teal-600 font-medium text-base ${
+                pathName === "/project" ? "text-teal-600" : ""
+              }`}
             >
               Projects
             </Link>
@@ -174,7 +207,9 @@ const AppNavBar = () => {
           <li className="mx-4">
             <Link
               href={"/testimonials"}
-              className="text-gray-900 hover:text-teal-600 font-medium text-base"
+              className={`text-gray-900 hover:text-teal-600 font-medium text-base ${
+                pathName === "/testimonials" ? "text-teal-600" : ""
+              }`}
             >
               Testimonial
             </Link>

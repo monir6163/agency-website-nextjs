@@ -2,18 +2,18 @@ const Subscribe = () => {
   return (
     <div className="flex flex-col lg:flex-row justify-center items-center max-w-screen-xl mx-auto px-4 py-20">
       <div className=" shadow-lg rounded px-2 lg:w-2/4 flex flex-col justify-center items-center py-10 lg:py-20">
-        <div className="text-green-500 text-xl mb-5 font-medium font-['Poppins'] uppercase">
+        <div className="text-green-500 text-xl mb-5 font-medium uppercase">
           SUBSCRIBE
         </div>
-        <div className="lg:w-96 text-center mb-3 text-black text-xl font-semibold font-['Poppins'] capitalize">
+        <div className="lg:w-96 text-center mb-3 text-black text-xl font-semibold capitalize">
           Subscribe to get the latest news about us
         </div>
-        <div className="text-center text-zinc-500 mb-10 text-base font-medium font-['Poppins'] capitalize">
+        <div className="text-center text-zinc-500 mb-10 text-base font-medium capitalize">
           Please drop your email below to get daily update about what we do
         </div>
         <label
           htmlFor="Email"
-          className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+          className="mb-2 text-sm font-medium text-gray-900 sr-only"
         >
           Email
         </label>

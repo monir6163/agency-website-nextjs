@@ -10,21 +10,85 @@ import Partner from "./Partner";
 const HeroList = async () => {
   let heroData = await getHeroData();
   return (
-    <div className="relative w-full ">
-      <div className="flex flex-col max-w-screen-xl mx-auto px-4 lg:flex-row justify-between items-center gap-10 pt-28">
-        <div className="">
-          <h1 className="text-2xl lg:text-5xl font-bold lg:leading-[65px] mb-4 capitalize">
-            {heroData["title"]}
-          </h1>
-          <p className="font-medium text-lg mb-8 capitalize">
-            {heroData["description"]}
-          </p>
-          <button className="inline-flex items-center justify-center gap-2 bg-green-500 rounded-lg p-4 text-white text-lg font-semibold font-poppins hover:bg-green-600 transition-all ease-in">
-            Get Started
-          </button>
+    <div className="relative h-auto ">
+      <div className=" max-w-screen-xl mx-auto px-4 pt-28 grid grid-cols-1 justify-items-center gap-5 lg:grid-cols-2">
+        <div className="flex items-center">
+          <div>
+            <h1 className="text-2xl lg:text-5xl font-bold lg:leading-[65px] mb-4 capitalize">
+              {heroData["title"]}
+            </h1>
+            <p className="font-medium text-lg mb-8 capitalize">
+              {heroData["description"]}
+            </p>
+            <button className="inline-flex items-center justify-center gap-2 bg-green-500 rounded-lg p-4 text-white text-lg font-semibold font-poppins hover:bg-green-600 transition-all ease-in">
+              Get Started
+            </button>
+          </div>
         </div>
         <div className="w-full gap-10">
-          <div className="flex flex-col lg:flex-row items-center justify-around gap-3 lg:mb-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 p-2 gap-4">
+            <div className="grid gap-4">
+              <div>
+                <Image
+                  className="h-auto max-w-full rounded-lg"
+                  src={heroData["image2"]}
+                  width={358}
+                  height={263}
+                  style={{
+                    width: "358px",
+                    height: "263px",
+                    objectFit: "cover",
+                  }}
+                  alt=""
+                />
+              </div>
+              <div>
+                <Image
+                  className="h-auto max-w-full rounded-lg"
+                  src={heroData["image1"]}
+                  alt=""
+                  style={{
+                    width: "358px",
+                    height: "263px",
+                    objectFit: "cover",
+                  }}
+                  width={358}
+                  height={263}
+                />
+              </div>
+            </div>
+            <div className="grid gap-4">
+              <div>
+                <Image
+                  className="h-auto max-w-full rounded-lg"
+                  src={heroData["image4"]}
+                  width={358}
+                  height={263}
+                  style={{
+                    width: "358px",
+                    height: "263px",
+                    objectFit: "cover",
+                  }}
+                  alt=""
+                />
+              </div>
+              <div>
+                <Image
+                  className="h-auto max-w-full rounded-lg"
+                  src={heroData["image3"]}
+                  alt=""
+                  width={358}
+                  height={263}
+                  style={{
+                    width: "358px",
+                    height: "263px",
+                    objectFit: "cover",
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+          {/* <div className="flex flex-col lg:flex-row items-center justify-around gap-3 lg:mb-4">
             <Image
               className="object-cover rounded"
               src={heroData["image2"]}
@@ -59,7 +123,7 @@ const HeroList = async () => {
               alt="Hero 3"
               priority={true}
             />
-          </div>
+          </div> */}
         </div>
       </div>
       <Partner />

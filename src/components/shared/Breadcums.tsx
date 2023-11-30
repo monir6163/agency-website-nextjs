@@ -27,11 +27,11 @@ const Breadcums = ({ pageName }: any) => {
                 <span className="text-green-500">
                   {pageName === "Team"
                     ? "Team"
-                    : pageName === "Testimonials"
+                    : pageName === "Testimonial List"
                     ? "Testimonials"
-                    : pageName === "Service"
-                    ? "Service"
-                    : pageName === "Projects"
+                    : pageName === "Our Services"
+                    ? "Services"
+                    : pageName === "All Projects"
                     ? "Projects"
                     : ""}
                 </span>
@@ -40,7 +40,7 @@ const Breadcums = ({ pageName }: any) => {
           </div>
         </div>
       </div>
-      <div className="absolute -top-40 right-0 opacity-40 blur-md bg-emerald-100 h-96 w-40 rounded-l-full"></div>
+      <div className="animate-bounce absolute -top-40 right-0 opacity-40 blur-sm bg-emerald-100 h-96 w-40 rounded-l-full"></div>
     </>
   );
 };

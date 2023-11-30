@@ -15,14 +15,10 @@ const AppFooter = () => {
     <>
       <div className="w-full bg-black pt-20">
         <div className="flex flex-col max-w-screen-xl mx-auto px-4 lg:flex-row justify-between gap-4">
-          <div className="">
-            <span className="text-orange-600 text-4xl font-bold font-['Poppins']">
-              Design
-            </span>{" "}
-            <span className="text-white text-4xl font-bold font-['Poppins']">
-              Agency
-            </span>
-            <div className="lg:w-80 pt-4 text-white text-xl font-normal font-['Avenir']">
+          <div>
+            <span className="text-orange-600 text-4xl font-bold">Design</span>{" "}
+            <span className="text-white text-4xl font-bold">Agency</span>
+            <div className="lg:w-80 pt-4 text-white text-base font-normal ">
               Some footer text about the Agency. Just a little description to
               help people understand you better
             </div>
@@ -31,41 +27,41 @@ const AppFooter = () => {
                 <Link
                   href="https://www.facebook.com/"
                   target="_blank"
-                  className="bg-green-500 w-10 h-10 flex items-center justify-center rounded-full hover:bg-teal-600 transition-all ease-in duration-500"
+                  className="bg-green-500 w-8 h-8 flex items-center justify-center rounded-full hover:bg-teal-600 transition-all ease-in duration-500"
                 >
                   <FontAwesomeIcon
                     icon={faFacebook}
-                    className="text-xl text-white"
+                    className="text-base text-white"
                   />
                 </Link>
                 <Link
                   href="https://www.twitter.com/"
                   target="_blank"
-                  className="bg-green-500 w-10 h-10 flex items-center justify-center rounded-full hover:bg-teal-600 transition-all ease-in duration-500"
+                  className="bg-green-500 w-8 h-8 flex items-center justify-center rounded-full hover:bg-teal-600 transition-all ease-in duration-500"
                 >
                   <FontAwesomeIcon
                     icon={faTwitter}
-                    className="text-xl text-white"
+                    className="text-base text-white"
                   />
                 </Link>
                 <Link
                   href="https://www.linkedin.com/"
                   target="_blank"
-                  className="bg-green-500 w-10 h-10 flex items-center justify-center rounded-full hover:bg-teal-600 transition-all ease-in duration-500"
+                  className="bg-green-500 w-8 h-8 flex items-center justify-center rounded-full hover:bg-teal-600 transition-all ease-in duration-500"
                 >
                   <FontAwesomeIcon
                     icon={faLinkedin}
-                    className="text-xl text-white"
+                    className="text-base text-white"
                   />
                 </Link>
                 <Link
                   href="https://www.instagram.com/"
                   target="_blank"
-                  className="bg-green-500 w-10 h-10 flex items-center justify-center rounded-full hover:bg-teal-600 transition-all ease-in duration-500"
+                  className="bg-green-500 w-8 h-8 flex items-center justify-center rounded-full hover:bg-teal-600 transition-all ease-in duration-500"
                 >
                   <FontAwesomeIcon
                     icon={faInstagram}
-                    className="text-xl text-white"
+                    className="text-base text-white"
                   />
                 </Link>
               </div>
@@ -75,7 +71,7 @@ const AppFooter = () => {
             <h3 className="text-white mb-4 font-semibold text-xl">
               Quick Links
             </h3>
-            <ul className="text-white text-base font-normal font-['Avenir']">
+            <ul className="text-white text-base font-normal ">
               <li className="py-1 hover:text-teal-600 transition-all ease-in duration-500">
                 <Link href="#">
                   <FontAwesomeIcon icon={faArrowRight} /> Home
@@ -105,7 +101,7 @@ const AppFooter = () => {
           </div>
           <div>
             <h3 className="text-white mb-4 font-semibold text-xl">Address</h3>
-            <div className="text-white text-xl font-medium font-['Avenir']">
+            <div className="text-white text-base font-medium ">
               <ul>
                 <li className="py-1">
                   <FontAwesomeIcon icon={faLocation} /> 123, Main Street, Your
@@ -124,7 +120,7 @@ const AppFooter = () => {
           </div>
         </div>
         <div className="text-center text-white py-10">
-          <span className="text-base font-['Avenir']">
+          <span className="text-base">
             © Design Agency {new Date().getFullYear().toString()}. All rights
             reserved.
           </span>

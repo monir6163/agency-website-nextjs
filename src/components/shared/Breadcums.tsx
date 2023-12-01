@@ -8,11 +8,11 @@ AosConfig;
 const Breadcums = ({ pageName }: any) => {
   return (
     <>
-      <div className="w-full h-96 bg-slate-50 relative">
+      <div className="w-full h-80 lg:h-96 bg-slate-50 relative">
         <div className="max-w-screen-xl mx-auto px-4 py-8">
           <div className="flex items-center justify-between">
             <div
-              className="py-40"
+              className="pt-28 lg:pt-40"
               data-aos="fade-down"
               data-aos-duration="1000"
               data-aos-easing="ease-in-out"

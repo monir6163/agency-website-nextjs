@@ -43,7 +43,7 @@ const ServiceList = async () => {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 p-2 gap-4">
+                <div className="grid grid-cols-1 lg:grid-cols-2 p-5 gap-4">
                   <div className="grid gap-4">
                     <div>
                       <Image
@@ -51,14 +51,14 @@ const ServiceList = async () => {
                         src={service["image1"]}
                         width={358}
                         height={164}
-                        alt=""
+                        alt={service["title"]}
                       />
                     </div>
                     <div>
                       <Image
                         className="h-auto max-w-full rounded-lg"
                         src={service["image2"]}
-                        alt=""
+                        alt={service["title"]}
                         width={358}
                         height={263}
                       />
@@ -71,14 +71,14 @@ const ServiceList = async () => {
                         src={service["image3"]}
                         width={358}
                         height={263}
-                        alt=""
+                        alt={service["title"]}
                       />
                     </div>
                     <div>
                       <Image
                         className="h-auto max-w-full rounded-lg"
                         src={service["image4"]}
-                        alt=""
+                        alt={service["title"]}
                         width={358}
                         height={263}
                       />

@@ -32,105 +32,35 @@ const HeroList = async () => {
             </button>
           </div>
         </div>
-        <div className="w-full gap-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 p-2 gap-4">
-            <div className="grid gap-4">
-              <div>
-                <Image
-                  className="h-auto max-w-full rounded-lg"
-                  src={heroData["image2"]}
-                  width={358}
-                  height={263}
-                  style={{
-                    width: "358px",
-                    height: "263px",
-                    objectFit: "cover",
-                  }}
-                  alt=""
-                />
-              </div>
-              <div>
-                <Image
-                  className="h-auto max-w-full rounded-lg"
-                  src={heroData["image1"]}
-                  alt=""
-                  style={{
-                    width: "358px",
-                    height: "263px",
-                    objectFit: "cover",
-                  }}
-                  width={358}
-                  height={263}
-                />
-              </div>
-            </div>
-            <div className="grid gap-4">
-              <div>
-                <Image
-                  className="h-auto max-w-full rounded-lg"
-                  src={heroData["image4"]}
-                  width={358}
-                  height={263}
-                  style={{
-                    width: "358px",
-                    height: "263px",
-                    objectFit: "cover",
-                  }}
-                  alt=""
-                />
-              </div>
-              <div>
-                <Image
-                  className="h-auto max-w-full rounded-lg"
-                  src={heroData["image3"]}
-                  alt=""
-                  width={358}
-                  height={263}
-                  style={{
-                    width: "358px",
-                    height: "263px",
-                    objectFit: "cover",
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-          {/* <div className="flex flex-col lg:flex-row items-center justify-around gap-3 lg:mb-4">
-            <Image
-              className="object-cover rounded"
-              src={heroData["image2"]}
-              width={408}
-              height={271}
-              alt="Hero 1"
-              priority={true}
-            />
-            <Image
-              className="object-cover rounded"
-              src={heroData["image1"]}
-              width={219}
-              height={219}
-              alt="hero 2"
-              priority={true}
-            />
-          </div>
-          <div className="flex flex-col lg:flex-row items-center gap-3 justify-around pt-4">
-            <Image
-              className="object-cover rounded"
-              src={heroData["image4"]}
-              width={210}
-              height={210}
-              alt="hero 4"
-              priority={true}
-            />
-            <Image
-              className="object-cover rounded"
-              src={heroData["image3"]}
-              width={408}
-              height={271}
-              alt="Hero 3"
-              priority={true}
-            />
-          </div> */}
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-3 justify-center items-center">
+          <Image
+            className="h-full md:h-72 object-cover rounded w-full md:w-full col-span-1 md:col-span-3"
+            src={heroData["image1"]}
+            alt="image1"
+            width={408}
+            height={271}
+          />
+          <Image
+            className="w-full md:w-56 h-full object-center rounded md:h-72 col-span-2"
+            src={heroData["image2"]}
+            alt="image2"
+            width={358}
+            height={263}
+          />
+          <Image
+            className="w-full md:w-56 h-full object-center rounded md:h-72 col-span-2"
+            src={heroData["image3"]}
+            alt="image3"
+            width={358}
+            height={263}
+          />
+          <Image
+            className="h-full md:h-72 object-cover rounded w-full md:w-full col-span-1 md:col-span-3"
+            src={heroData["image4"]}
+            alt="image4"
+            width={408}
+            height={271}
+          />
         </div>
       </div>
       <Partner />

@@ -38,25 +38,18 @@ const TeamList = async () => {
           <div className="grid grid-cols-1 justify-items-center gap-5 lg:grid-cols-3 ">
             {data.slice(0, 3).map((item: any, index: any) => (
               <div
-                className="max-w-2xl bg-white border border-gray-200 rounded-lg shadow group relative"
+                className="max-w-2xl bg-white border rounded-lg shadow group relative hover:border-green-600 transition ease-in duration-500"
                 key={index}
               >
-                <Link
-                  href="#"
-                  className=" group-hover:blur-sm transition ease-in duration-500"
-                >
+                <div className="w-full p-5 ">
                   <Image
-                    className="rounded object-cover"
+                    className="rounded-lg"
                     src={item["image"]}
                     width={500}
                     height={300}
-                    style={{
-                      width: "100%",
-                      height: "300px",
-                    }}
-                    alt=""
+                    alt=" image"
                   />
-                </Link>
+                </div>
                 <div className="p-5">
                   <h5 className="mb-2 text-2xl text-center font-semibold tracking-tight text-gray-900">
                     {item["name"]}

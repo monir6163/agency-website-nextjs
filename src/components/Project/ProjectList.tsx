@@ -31,21 +31,21 @@ const ProjectList = async () => {
           <div className="grid grid-cols-1 justify-items-center gap-5 lg:grid-cols-2">
             {projectList.map((project: any, index: any) => (
               <div
-                className="w-full bg-white rounded-lg border shadow group hover:border-green-600 transition duration-500 ease-in-out"
+                className="w-full bg-white rounded-lg border shadow group hover:border-green-600 transition duration-500 ease-in-out p-5"
                 key={index}
               >
-                <div className="p-5 flex justify-center items-center">
+                <div className="flex justify-center items-center">
                   <Image
                     src={project["image"]}
-                    alt="1"
+                    alt={project["title"]}
                     width={544}
                     height={472}
-                    className="rounded-lg"
+                    className="rounded-lg w-full h-full object-cover"
                   />
                 </div>
 
                 <div className="p-5">
-                  <h5 className="mb-2 text-2xl text-center font-semibold tracking-tight text-gray-900">
+                  <h5 className="text-2xl text-center font-semibold tracking-tight text-gray-900">
                     {project["title"]}
                   </h5>
                 </div>

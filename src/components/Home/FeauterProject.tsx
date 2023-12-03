@@ -30,13 +30,13 @@ const FeauterProject = async () => {
           <div className="mt-10">
             <div className="grid grid-cols-1 justify-items-center gap-5 lg:grid-cols-2">
               <div className="flex items-center">
-                <div className="w-full ">
+                <div className="w-full">
                   <Image
                     src={feauterProject[0]["image"]}
                     width={603}
                     height={531}
-                    alt=""
-                    className="object-cover rounded"
+                    alt={feauterProject[0]["title"]}
+                    className="object-cover rounded object-center w-full h-screen"
                   />
                   <p className="text-sm text-[#2E3E5C] pt-5">
                     {feauterProject[0]["remark"]} - June 20, 2022
@@ -49,7 +49,7 @@ const FeauterProject = async () => {
                 </div>
               </div>
               <div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 p-2 gap-4">
+                <div className="grid grid-cols-1 lg:grid-cols-2">
                   <div className="grid gap-4">
                     <div>
                       <Image
@@ -57,7 +57,7 @@ const FeauterProject = async () => {
                         src={feauterProject[1]["image"]}
                         width={287}
                         height={188}
-                        alt="Hero 1"
+                        alt={feauterProject[1]["title"]}
                         priority={true}
                       />
                       <p className="text-sm text-[#2E3E5C] pt-5">
@@ -75,7 +75,7 @@ const FeauterProject = async () => {
                         src={feauterProject[2]["image"]}
                         width={287}
                         height={188}
-                        alt="Hero 1"
+                        alt={feauterProject[2]["title"]}
                         priority={true}
                       />
                       <p className="text-sm text-[#2E3E5C] pt-5">
@@ -83,7 +83,7 @@ const FeauterProject = async () => {
                       </p>
                       <h3 className="text-base font-bold text-[#2E3E5C] pt-2 hover:text-teal-600 hover:underline">
                         <Link href={feauterProject[3]["live"]} target="_blank">
-                          {feauterProject[3]["title"]}
+                          {feauterProject[2]["title"]}
                         </Link>
                       </h3>
                     </div>
@@ -95,7 +95,7 @@ const FeauterProject = async () => {
                         src={feauterProject[3]["image"]}
                         width={287}
                         height={188}
-                        alt="Hero 1"
+                        alt={feauterProject[3]["title"]}
                         priority={true}
                       />
                       <p className="text-sm text-[#2E3E5C] pt-5">
@@ -113,7 +113,7 @@ const FeauterProject = async () => {
                         src={feauterProject[4]["image"]}
                         width={287}
                         height={188}
-                        alt="Hero 1"
+                        alt={feauterProject[4]["title"]}
                         priority={true}
                       />
                       <p className="text-sm text-[#2E3E5C] pt-5">
